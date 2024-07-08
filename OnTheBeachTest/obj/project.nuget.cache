@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kowc/Nt7qg0TJq8xrYeAOKQmQOeWutiah4qNp8hGSMjR5/NX2FYSV5TBITFKiy3MXMfWRZS1d0y4yBJVDK9xmQ==",
+  "dgSpecHash": "ieMVgdfANiByvt4DZ1o89wEersFaobVHeJPsixmfrebYqeuxL5UN5esAFFs5TUkcsicRf8uEg+4Az6j2LKiCAw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,7 @@
     "C:\\Users\\Simon\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.8.0\\microsoft.testplatform.objectmodel.17.8.0.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\microsoft.testplatform.testhost\\17.8.0\\microsoft.testplatform.testhost.17.8.0.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
-    "C:\\Users\\Simon\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Simon\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\nunit\\3.14.0\\nunit.3.14.0.nupkg.sha512",
     "C:\\Users\\Simon\\.nuget\\packages\\nunit.analyzers\\3.9.0\\nunit.analyzers.3.9.0.nupkg.sha512",
