@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest.csproj": {}
+    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest.csproj": {
+    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest.csproj",
-        "projectName": "OnTheBeachTechnicalTest",
-        "projectPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest.csproj",
+        "projectUniqueName": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj",
+        "projectName": "OnTheBeachTest",
+        "projectPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj",
         "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTechnicalTest\\obj\\",
+        "outputPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.8.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.14.0, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.9.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
