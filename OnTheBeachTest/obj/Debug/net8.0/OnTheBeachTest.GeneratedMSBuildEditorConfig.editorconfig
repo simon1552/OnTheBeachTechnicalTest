@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OnTheBeachTest
-build_property.ProjectDir = C:\Users\Simon\Downloads\OnTheBeachTechnicalTest\OnTheBeachTest\
+build_property.ProjectDir = /Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj": {}
+    "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/OnTheBeachTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\OnTheBeachImplementation.csproj": {
+    "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/OnTheBeachImplementation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\OnTheBeachImplementation.csproj",
+        "projectUniqueName": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/OnTheBeachImplementation.csproj",
         "projectName": "OnTheBeachImplementation",
-        "projectPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\OnTheBeachImplementation.csproj",
-        "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\obj\\",
+        "projectPath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/OnTheBeachImplementation.csproj",
+        "packagesPath": "/Users/simosiu/.nuget/packages/",
+        "outputPath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/simosiu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -61,36 +64,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj": {
+    "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/OnTheBeachTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj",
+        "projectUniqueName": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/OnTheBeachTest.csproj",
         "projectName": "OnTheBeachTest",
-        "projectPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\OnTheBeachTest.csproj",
-        "packagesPath": "C:\\Users\\Simon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachTest\\obj\\",
+        "projectPath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/OnTheBeachTest.csproj",
+        "packagesPath": "/Users/simosiu/.nuget/packages/",
+        "outputPath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Simon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/simosiu/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\OnTheBeachImplementation.csproj": {
-                "projectPath": "C:\\Users\\Simon\\Downloads\\OnTheBeachTechnicalTest\\OnTheBeachImplementation\\OnTheBeachImplementation.csproj"
+              "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/OnTheBeachImplementation.csproj": {
+                "projectPath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachImplementation/OnTheBeachImplementation.csproj"
               }
             }
           }
@@ -99,15 +100,28 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoFixture": {
+              "target": "Package",
+              "version": "[4.18.1, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.8.0, )"
+            },
+            "Moq.AutoMock": {
+              "target": "Package",
+              "version": "[3.5.0, )"
             },
             "NUnit": {
               "target": "Package",
@@ -146,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
