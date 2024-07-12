@@ -2,5 +2,5 @@ using OnTheBeachTechTest;
 
 public interface IHotelRepository
 {
-    List<Hotel> LoadHotels();
+    List<Hotel> GetHotels();
 }

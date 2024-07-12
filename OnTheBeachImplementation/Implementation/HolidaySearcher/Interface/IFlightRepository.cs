@@ -2,5 +2,5 @@ using OnTheBeachTechnicalTest;
 
 public interface IFlightRepository
 {
-    List<Flight> LoadFlights();
+    List<Flight> GetFlights();
 }

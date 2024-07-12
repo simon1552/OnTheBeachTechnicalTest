@@ -1,11 +1,17 @@
 using NUnit.Framework;
 using OnTheBeachTechnicalTest;
 using OnTheBeachTechnicalTest.Implementation.Models;
+using OnTheBeachTechnicalTest.Implementation.Repository;
+using OnTheBeachTechnicalTest.Implementation.Service;
 
 namespace OnTheBeachTest
 {
-    public class Tests
+    
+    [TestFixture]
+    public class HolidaySearchIntegrationTests
     {
+        private static string _JsonPath => "OnTheBeachImplementation/Implementation/JSON/";
+        
         [SetUp]
         public void Setup()
         {
@@ -14,8 +20,8 @@ namespace OnTheBeachTest
         [Test]
         public void Search_Departing_From_MAN_Traveling_To_AGP()
         {
-            
             //arrange
+
             var holidaySearch = new HolidaySearch("MAN", "AGP", "2023/07/01", 7);
             var result = holidaySearch.Results.First();
             
