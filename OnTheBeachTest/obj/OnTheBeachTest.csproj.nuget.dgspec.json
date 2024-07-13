@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -95,6 +100,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -104,6 +114,10 @@
             "AutoFixture": {
               "target": "Package",
               "version": "[4.18.1, )"
+            },
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[7.0.0-alpha.4, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",

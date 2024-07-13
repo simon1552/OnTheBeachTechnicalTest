@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "53uVAgXUThZjBpHUiUX5+oyCjV6FgcsW0KmeL60kkHKi16AIHC6R/P9L5ebm3gWcmOLTCTAtWFbWwNbks9ISFQ==",
+  "dgSpecHash": "MnOCXf7v80E=",
   "success": true,
   "projectFilePath": "/Users/simosiu/Downloads/WIP/OnTheBeachTechnicalTest/OnTheBeachTest/OnTheBeachTest.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "/Users/simosiu/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/fare/2.1.1/fare.2.1.1.nupkg.sha512",
+    "/Users/simosiu/.nuget/packages/fluentassertions/7.0.0-alpha.4/fluentassertions.7.0.0-alpha.4.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/microsoft.codecoverage/17.8.0/microsoft.codecoverage.17.8.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/microsoft.net.test.sdk/17.8.0/microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
@@ -26,6 +27,7 @@
     "/Users/simosiu/.nuget/packages/system.collections/4.3.0/system.collections.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.componentmodel/4.3.0/system.componentmodel.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.componentmodel.annotations/4.3.0/system.componentmodel.annotations.4.3.0.nupkg.sha512",
+    "/Users/simosiu/.nuget/packages/system.configuration.configurationmanager/4.4.0/system.configuration.configurationmanager.4.4.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.diagnostics.debug/4.3.0/system.diagnostics.debug.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.diagnostics.eventlog/6.0.0/system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.globalization/4.3.0/system.globalization.4.3.0.nupkg.sha512",
@@ -39,6 +41,7 @@
     "/Users/simosiu/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.runtime.compilerservices.unsafe/4.3.0/system.runtime.compilerservices.unsafe.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.runtime.extensions/4.3.0/system.runtime.extensions.4.3.0.nupkg.sha512",
+    "/Users/simosiu/.nuget/packages/system.security.cryptography.protecteddata/4.4.0/system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.text.regularexpressions/4.3.0/system.text.regularexpressions.4.3.0.nupkg.sha512",
     "/Users/simosiu/.nuget/packages/system.threading/4.3.0/system.threading.4.3.0.nupkg.sha512",
