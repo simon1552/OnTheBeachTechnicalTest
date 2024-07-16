@@ -1,0 +1,41 @@
+# Ignore bin, obj, and .vs folders
+/bin/
+/obj/
+/.vs/
+
+# Ignore .idea directory (JetBrains IDEs)
+/.idea/
+
+# Ignore .csproj.user files
+*.csproj.user
+
+# Do not ignore .csproj files (they should be checked in)
+!*.csproj
+
+# Do not ignore hand-written .cs files (they should be checked in)
+!*.cs
+
+# Do not ignore packages.lock.json (if exists)
+!packages.lock.json
+
+# Probably check in .sln file
+*.sln
+
+# Allow JSON files
+!*.json
+
+# Ignore dependencies
+/packages/
+/node_modules/
+
+# Ignore .NET 8.0-specific files
+# (Add any specific .NET 8.0 files or directories to be ignored here)
+*.dotnet
+*.dotnetcore
+*.dotnet8.0
+*.dotnet8.0.x64
+
+# Ignore any other environment-specific files or directories
+.env
+.env.local
+.env.*.local
