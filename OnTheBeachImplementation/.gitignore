@@ -2,6 +2,7 @@
 /bin/
 /obj/
 /.vs/
+/.gitignore/
 
 # Ignore .idea directory (JetBrains IDEs)
 /.idea/
@@ -27,6 +28,7 @@
 # Ignore dependencies
 /packages/
 /node_modules/
+/Dependencies/
 
 # Ignore .NET 8.0-specific files
 # (Add any specific .NET 8.0 files or directories to be ignored here)
