@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnTheBeachTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8b82dae7935f21a7af7a6525339d0ccc4a93f465")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f7cac3cd7ca93604ec77644e19ae6d5c077a4ba")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnTheBeachTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnTheBeachTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

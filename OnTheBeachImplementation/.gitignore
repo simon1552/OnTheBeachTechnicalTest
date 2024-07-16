@@ -16,9 +16,6 @@
 # Do not ignore hand-written .cs files (they should be checked in)
 !*.cs
 
-# Do not ignore packages.lock.json (if exists)
-!packages.lock.json
-
 # Probably check in .sln file
 *.sln
 
