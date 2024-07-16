@@ -1,14 +1,12 @@
 using AutoFixture;
+using FluentAssertions;
 using Moq.AutoMock;
 using OnTheBeachTechnicalTest;
 using OnTheBeachTechnicalTest.Implementation.HolidaySearcher;
 using OnTheBeachTechnicalTest.Implementation.Models;
 using OnTheBeachTechTest;
-using FluentAssertions;
 
-using Xunit;
-
-namespace OnTheBeachTest
+namespace OnTheBeachTest.HolidaySearchTest
 
 {
     public class HolidaySearchTest
@@ -32,10 +30,17 @@ namespace OnTheBeachTest
             var hotelServiceMock = _autoMocker.GetMock<IHotelService>();
             hotelServiceMock.Setup(h => h.GetFilteredHotels("AGP", "2023-07-01", 7)).Returns([hotel]);
 
-            var holidaySearch = _autoMocker.CreateInstance<HolidaySearch>();
+            var holidaySearch = _autoMocker.CreateInstance<HolidaySearchService>();
+            
+            var searchCriteria = _fixture.Create<HolidaySearch>();
+            searchCriteria.DepartingFrom = "MAN";
+            searchCriteria.TravelingTo = "AGP";
+            searchCriteria.DepartureDate = "2023-07-01";
+            searchCriteria.Duration = 7;
             
             //act
-            var result = holidaySearch.Results.First();
+            var results = holidaySearch.SearchHolidays(searchCriteria);
+            var result = results.First();
 
             //assert
             var expectedTotalPrice = flight.Price + (hotel.PricePerNight * hotel.Nights);
