@@ -1,20 +1,14 @@
-﻿using OnTheBeachTechTest;
+﻿using Newtonsoft.Json;
+using OnTheBeachTechTest;
 
-namespace OnTheBeachTechnicalTest.Implementation.Repository
+namespace OnTheBeachTechnicalTest.Implementation.Repository;
 
-{
 public class HotelRepository : IHotelRepository
 {
-    private readonly string _JsonPath;
-
-    public HotelRepository(string jsonPath)
-    {
-        _JsonPath = jsonPath;
-    }
-
     public List<Hotel> GetHotels()
     {
-        throw new NotImplementedException();
+        // Load from JSON file
+        var jsonData = File.ReadAllText("OnTheBeachImplementation/Implementation/Json/Hotel.json");
+        return JsonConvert.DeserializeObject<List<Hotel>>(jsonData);
     }
-}
 }

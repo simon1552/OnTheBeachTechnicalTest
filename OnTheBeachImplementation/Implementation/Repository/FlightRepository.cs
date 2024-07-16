@@ -1,19 +1,13 @@
-﻿
-namespace OnTheBeachTechnicalTest
+﻿using Newtonsoft.Json;
 
-{
+namespace OnTheBeachTechnicalTest.Implementation.Repository;
+
 public class FlightRepository : IFlightRepository
 {
-    private readonly string _JsonPath;
-
-    public FlightRepository(string jsonPath)
-    {
-        _JsonPath = jsonPath;
-    }
-
     public List<Flight> GetFlights()
-        {
-            throw new NotImplementedException();
-        }
-}
+    {
+        // Load from JSON file
+        var jsonData = File.ReadAllText("OnTheBeachImplementation/Implementation/Json/Flights.json");
+        return JsonConvert.DeserializeObject<List<Flight>>(jsonData);
+    }
 }
