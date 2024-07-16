@@ -22,8 +22,20 @@ namespace OnTheBeachTest
         {
             //arrange
             var flight = _fixture.Create<Flight>();
-            
+            flight.Id = 2;
+            flight.Airline = "Oceanic Airlines";
+            flight.From = "MAN";
+            flight.To = "AGP";
+            flight.Price = 245;
+            flight.DepartureDate = "2023-07-01";
+
             var hotel = _fixture.Create<Hotel>();
+            hotel.Id = 9;
+            hotel.Name = "Nh Malaga";
+            hotel.PricePerNight = 83;
+            hotel.ArrivalDate = "2023-07-01";
+            hotel.LocalAirports = new List<string> { "AGP" };
+            hotel.Nights = 7;
 
             var flightServiceMock = _autoMocker.GetMock<IFlightService>();
             flightServiceMock.Setup(f => f.GetFilteredFlights("MAN", "AGP", "2023-07-01"))
