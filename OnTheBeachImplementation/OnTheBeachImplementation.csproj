@@ -16,4 +16,13 @@
       <Folder Include="Implementation\JSON\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Implementation\Json\Flights.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="Implementation\Json\Hotels.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

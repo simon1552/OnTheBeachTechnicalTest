@@ -26,7 +26,7 @@ namespace OnTheBeachTest
         public void Search_Departing_From_MAN_Traveling_To_AGP()
         {
             // Arrange
-            var holidaySearch = new HolidaySearch("MAN", "AGP", "2023/07/01", 7);
+            var holidaySearch = new HolidaySearch("MAN", "AGP", "2023-07-01", 7);
             
             // Act
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
@@ -39,7 +39,7 @@ namespace OnTheBeachTest
         [Test]
         public void Search_Departing_From_ANY_Traveling_To_PMI()
         {
-            var holidaySearch = new HolidaySearch("ANY", "PMI", "2023/06/15", 10);
+            var holidaySearch = new HolidaySearch("ANY", "PMI", "2023-06-15", 10);
             
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
 
@@ -50,7 +50,7 @@ namespace OnTheBeachTest
         [Test]
         public void Search_Departing_From_ANY_Traveling_To_LPA()
         {
-            var holidaySearch = new HolidaySearch("ANY", "PMI", "2022/11/10", 14);
+            var holidaySearch = new HolidaySearch("ANY", "PMI", "2022-11-10", 14);
             
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
             var result = results.First();
