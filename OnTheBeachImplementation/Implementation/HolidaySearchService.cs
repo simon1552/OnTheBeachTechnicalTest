@@ -18,6 +18,9 @@ public class HolidaySearchService : IHolidaySearchService
     {
         var flights = _flightService.GetFilteredFlights(searchCriteria.DepartingFrom, searchCriteria.TravelingTo, searchCriteria.DepartureDate);
         var hotels = _hotelService.GetFilteredHotels(searchCriteria.TravelingTo, searchCriteria.DepartureDate, searchCriteria.Duration);
+        
+        Console.WriteLine($"Number of flights found: {flights.Count}");
+        Console.WriteLine($"Number of hotels found: {hotels.Count}");
 
         return (from flight in flights
                 from hotel in hotels
