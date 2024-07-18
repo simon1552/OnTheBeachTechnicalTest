@@ -42,18 +42,19 @@ namespace OnTheBeachTest
             var holidaySearch = new HolidaySearch("ANY", "PMI", "2023-06-15", 10);
             
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
-
             var result = results.First();
+            
             Assert.IsTrue(result.Flight.Id == 6 && result.Hotel.Id == 5);
         }
 
         [Test]
         public void Search_Departing_From_ANY_Traveling_To_LPA()
         {
-            var holidaySearch = new HolidaySearch("ANY", "PMI", "2022-11-10", 14);
+            var holidaySearch = new HolidaySearch("ANY", "LPA", "2022-11-10", 14);
             
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
             var result = results.First();
+            
             Assert.IsTrue(result.Flight.Id == 7 && result.Hotel.Id == 6);
         }
     }

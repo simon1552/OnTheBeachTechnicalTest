@@ -12,8 +12,26 @@ public class FlightService : IFlightService
     }
     public List<Flight> GetFilteredFlights(string departingFrom, string travelingTo, string departureDate)
     {
-        return _flightRepository.GetFlights()
-            .Where(f => (f.From == departingFrom) && f.To == travelingTo &&
-                        f.DepartureDate == departureDate).ToList();
+        
+        
+        var flights = _flightRepository.GetFlights();
+        
+        if (departingFrom == "ANY")
+        {
+            var londonAirports = new List<string> { "LGW", "LTN" };
+            flights = flights.Where(f => londonAirports.Contains(f.From) || f.From == "MAN")
+                .ToList();
+        }
+        else
+        {
+            flights = flights.Where(f => f.From == departingFrom)
+                .ToList();
+        }
+
+        flights = flights.Where(f => f.To == travelingTo && f.DepartureDate == departureDate)
+            .OrderBy(f => f.Price)
+            .ToList();
+
+        return flights.OrderBy(f => f.Price).ToList();
     }
 }
