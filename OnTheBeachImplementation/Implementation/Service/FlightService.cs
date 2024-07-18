@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using OnTheBeachTechnicalTest.Implementation.HolidaySearcher;
 
 namespace OnTheBeachTechnicalTest.Implementation.Service;

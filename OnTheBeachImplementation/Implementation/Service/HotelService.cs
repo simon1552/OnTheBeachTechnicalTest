@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using OnTheBeachTechnicalTest.Implementation.HolidaySearcher;
 using OnTheBeachTechTest;
 
@@ -19,10 +21,7 @@ public class HotelService : IHotelService
             .Where(h => h.LocalAirports.Contains(travelingTo) && h.ArrivalDate == arrivalDate && h.Nights == duration)
             .OrderBy(h => h.PricePerNight)
             .ToList();
-
-        Console.WriteLine($"Filtered Hotels Count: {hotels.Count}");
-        hotels.ForEach(h => Console.WriteLine($"Hotel ID: {h.Id}, Name: {h.Name}, Arrival Date: {h.ArrivalDate}, Nights: {h.Nights}, Local Airports: {string.Join(", ", h.LocalAirports)}"));
-
+        
         return hotels;
     }
 }
