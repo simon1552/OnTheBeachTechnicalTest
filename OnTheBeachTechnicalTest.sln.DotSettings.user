@@ -5,7 +5,12 @@
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c8889588_002D2051_002D480e_002Db4d4_002D67a0a63c9db3/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Search_Departing_From_MAN_Traveling_To_AGP #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;ProjectFile&gt;1E8D4C91-3951-40F8-8494-4523F69886DE/d:HolidaySearchTest/f:HolidaySearchIntegrationTests.cs&lt;/ProjectFile&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;1E8D4C91-3951-40F8-8494-4523F69886DE/d:HolidaySearchTest/f:HolidaySearchIntegrationTests.cs&lt;/ProjectFile&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;xUnit::1E8D4C91-3951-40F8-8494-4523F69886DE::net8.0::OnTheBeachTest.HolidaySearchTest.HotelServiceTest.GivenHotelRepository_WhenGetFilteredHotels_ThenReturnHotels&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+  &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=cbb6289f_002Dad74_002D40a0_002Dbe07_002D6772cfb307d7/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Search_Departing_From_MAN_Traveling_To_AGP #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
