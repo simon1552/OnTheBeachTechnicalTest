@@ -15,7 +15,6 @@ public class FlightService : IFlightService
     public List<Flight> GetFilteredFlights(string departingFrom, string travelingTo, string departureDate)
     {
         
-        
         var flights = _flightRepository.GetFlights();
         
         if (departingFrom == "ANY London")
