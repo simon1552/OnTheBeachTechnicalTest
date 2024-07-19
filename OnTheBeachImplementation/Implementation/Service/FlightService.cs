@@ -18,7 +18,13 @@ public class FlightService : IFlightService
         
         var flights = _flightRepository.GetFlights();
         
-        if (departingFrom == "ANY")
+        if (departingFrom == "ANY London")
+        {
+            var londonAirports = new List<string> { "LGW", "LTN" };
+            flights = flights.Where(f => londonAirports.Contains(f.From))
+                .ToList();
+        }
+        else if (departingFrom == "ANY")
         {
             var londonAirports = new List<string> { "LGW", "LTN" };
             flights = flights.Where(f => londonAirports.Contains(f.From) || f.From == "MAN")

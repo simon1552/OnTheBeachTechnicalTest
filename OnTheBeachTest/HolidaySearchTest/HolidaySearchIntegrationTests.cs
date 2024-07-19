@@ -37,9 +37,9 @@ namespace OnTheBeachTest
         }
 
         [Test]
-        public void Search_Departing_From_ANY_Traveling_To_PMI()
+        public void Search_Departing_From_ANY_London_Traveling_To_PMI()
         {
-            var holidaySearch = new HolidaySearch("ANY", "PMI", "2023-06-15", 10);
+            var holidaySearch = new HolidaySearch("ANY London", "PMI", "2023-06-15", 10);
             
             var results = _holidaySearchService.SearchHolidays(holidaySearch);
             var result = results.First();
