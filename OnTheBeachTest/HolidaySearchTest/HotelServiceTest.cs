@@ -25,7 +25,7 @@ public class HotelServiceTest
         hotel.ArrivalDate = "2023-07-01";
         hotel.Nights = 7;
 
-    var expectedHotels = new List<Hotel> { hotel };
+        var expectedHotels = new List<Hotel> { hotel };
         
 
         hotelRepoMock.Setup(h => h.GetHotels()).Returns(expectedHotels);
