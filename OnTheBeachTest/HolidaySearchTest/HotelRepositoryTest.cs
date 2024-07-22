@@ -20,10 +20,22 @@ public class HotelRepositoryTest
         
         var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "../net8.0/Implementation/Json/Hotels.json");
         List<Hotel> allHotels;
-        using (var streamReader = new StreamReader(jsonFilePath))
+        
+        try
         {
-            var jsonData = streamReader.ReadToEnd();
-            allHotels = JsonConvert.DeserializeObject<List<Hotel>>(jsonData);
+            using (var streamReader = new StreamReader(jsonFilePath))
+            {
+                var jsonData = streamReader.ReadToEnd();
+                allHotels = JsonConvert.DeserializeObject<List<Hotel>>(jsonData);
+            }
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new Exception($"Json path file not found: {jsonFilePath}", ex);
+        }
+        catch (JsonException ex)
+        {
+            throw new Exception("Failed to deserialize JSON data.", ex);
         }
 
         hotelRepoMock.Setup(h => h.GetHotels()).Returns(allHotels);
