@@ -1,6 +1,7 @@
 using AutoFixture;
 using FluentAssertions;
 using Moq.AutoMock;
+using Newtonsoft.Json;
 using OnTheBeachTechnicalTest.Implementation.Service;
 using OnTheBeachTechTest;
 
@@ -17,25 +18,23 @@ public class HotelRepositoryTest
         var hotelRepoMock = _autoMocker.GetMock<IHotelRepository>();
         var hotelService = _autoMocker.CreateInstance<HotelService>();
         
-        var allHotels = _fixture.CreateMany<Hotel>(5).ToList();
+        var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "../net8.0/Implementation/Json/Hotels.json");
+        List<Hotel> allHotels;
+        using (var streamReader = new StreamReader(jsonFilePath))
+        {
+            var jsonData = streamReader.ReadToEnd();
+            allHotels = JsonConvert.DeserializeObject<List<Hotel>>(jsonData);
+        }
 
-        var validJsonHotel = _fixture.Build<Hotel>()
-            .With(h => h.LocalAirports, new List<string> {"PMI"})
-            .With(f => f.ArrivalDate, "2023-06-15")
-            .With(f => f.Nights, 10)
-            .Create();
-        
-        allHotels.Add(validJsonHotel);
-        
-        var expectedHotels = new List<Hotel> { validJsonHotel };
-        
         hotelRepoMock.Setup(h => h.GetHotels()).Returns(allHotels);
         
         //Act
         var hotels = hotelService.GetFilteredHotels("PMI", "2023-06-15", 10);
 
         // Assert
-        hotels.Should().BeEquivalentTo(expectedHotels);
+        
+        var expectedJsonHotels = allHotels.FindAll(h => h.LocalAirports.Contains("PMI") && h.ArrivalDate == "2023-06-15" && h.Nights == 10);
+        hotels.Should().BeEquivalentTo(expectedJsonHotels);
 
     }
 

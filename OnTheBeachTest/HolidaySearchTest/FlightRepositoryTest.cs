@@ -1,9 +1,11 @@
 using AutoFixture;
 using FluentAssertions;
 using Moq.AutoMock;
+using Newtonsoft.Json;
 using OnTheBeachTechnicalTest;
 using OnTheBeachTechnicalTest.Implementation.Repository;
 using OnTheBeachTechnicalTest.Implementation.Service;
+using OnTheBeachTechTest;
 
 namespace OnTheBeachTest.HolidaySearchTest;
 
@@ -20,32 +22,31 @@ public class FlightRepositoryTest
         
         var flightRepository = _autoMocker.GetMock<IFlightRepository>();
         var flightService = _autoMocker.CreateInstance<FlightService>();
-
-        var validJsonFlight = _fixture.Build<Flight>()
-            .With(f => f.From, "MAN")
-            .With(f => f.To, "PMI")
-            .With(f => f.DepartureDate, "2023-06-15")
-            .Create();
         
-        
-        var randomFlights = _fixture.CreateMany<Flight>(5).ToList();
-        randomFlights.ForEach(f =>
+        var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "../net8.0/Implementation/Json/Flights.json");
+        List<Flight> allFlights;
+        using (var streamReader = new StreamReader(jsonFilePath))
         {
-            f.From = "BLN";
-            f.To = "AMS";
-            f.DepartureDate = "2022-01-01";
-        });
-
-        var allFlights = new List<Flight>(randomFlights) { validJsonFlight };
+            var jsonData = streamReader.ReadToEnd();
+            allFlights = JsonConvert.DeserializeObject<List<Flight>>(jsonData);
+        }
         
         flightRepository.Setup(f => f.GetFlights()).Returns(allFlights);
 
         // Act
-        var flights = flightService.GetFilteredFlights("MAN", "PMI", "2023-06-15");
+        var flights = flightService.GetFilteredFlights("ANY", "PMI", "2023-06-15");
         
         // Assert
-        flights.Should().Contain(f => f.From == "MAN" && f.To == "PMI" && f.DepartureDate == "2023-06-15").Which
-            .Should().BeEquivalentTo(validJsonFlight);
+        
+        flights.Should().HaveCount(4);
+
+        var expectedFlights = allFlights.FindAll(f =>
+            (f.From == "LGW" || f.From == "LTN" || f.From == "MAN") &&
+            f.To == "PMI" &&
+            f.DepartureDate == "2023-06-15"
+        );
+
+        flights.Should().BeEquivalentTo(expectedFlights);
 
     }
 }

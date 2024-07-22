@@ -28,7 +28,8 @@ namespace OnTheBeachTest.HolidaySearchTest
                 .Returns([flight]);
 
             var hotelServiceMock = _autoMocker.GetMock<IHotelService>();
-            hotelServiceMock.Setup(h => h.GetFilteredHotels("AGP", "2023-07-01", 7)).Returns([hotel]);
+            hotelServiceMock.Setup(h => h.GetFilteredHotels("AGP", "2023-07-01", 7))
+                .Returns([hotel]);
 
             var holidaySearch = _autoMocker.CreateInstance<HolidaySearchService>();
             
